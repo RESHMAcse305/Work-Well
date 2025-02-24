@@ -1,0 +1,25 @@
+﻿@model WorkWell.Models.JobApplication
+@{
+    ViewBag.Title = "jobapply_load";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>please apply</h2>
+<div>
+    @using (Html.BeginForm("job_apply", "Job_Apply", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.Hidden("jid", Model.JobId)
+        @Html.Hidden("cid", Model.CompanyId)
+        <div>
+            <label>Upload your CV:</label>
+        </div>
+        <div>
+            @Html.TextBox("resume", "", new { type = "file" })
+        </div>
+        <input type="submit" value="Upload" />
+        <div>
+            @Html.DisplayFor(m => m.applymsg)
+        </div>
+    }
+</div>
+
+

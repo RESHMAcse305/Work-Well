@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35130.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkWell", "WorkWell\WorkWell.csproj", "{828FD6DF-ED88-4A0C-A578-1F88606C202B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{828FD6DF-ED88-4A0C-A578-1F88606C202B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828FD6DF-ED88-4A0C-A578-1F88606C202B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828FD6DF-ED88-4A0C-A578-1F88606C202B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828FD6DF-ED88-4A0C-A578-1F88606C202B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAB5CBBC-9938-41F2-945A-2D6EC01A4925}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,61 @@
+﻿@model WorkWell.Models.JobSearchViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Display All Job Vacancies</h2>
+<div>
+    @using (Html.BeginForm("SearchJobs", "Jobs", FormMethod.Post))
+    {
+    <table>
+        <tr>
+            <td><label>Location:</label></td>
+            <td>@Html.TextBoxFor(m => m.Location, new { placeholder = "Enter location" })</td>
+
+            <td><label>Experience:</label></td>
+            <td>@Html.TextBoxFor(m => m.Experience, new { placeholder = "Enter experience" })</td>
+
+            <td><label>Skills:</label></td>
+            <td>@Html.TextBoxFor(m => m.Skills, new { placeholder = "Enter skills" })</td>
+
+            <td><input type="submit" value="Search" /></td>
+        </tr>
+    </table>
+}
+</div>
+<div>
+    <table id="t01" class="table">
+        <tr>
+
+            <th>Company Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Skills</th>
+            <th>Experience</th>
+            <th>salary</th>
+            <th>Location</th>
+            <th>Closing date</th>
+        </tr>
+        @foreach (var job in Model.JobVacancies)
+        {
+            <tr>
+         
+                <td>@job.cid</td>
+                <td>@job.jtitle</td>
+                <td>@job.desc</td>
+                <td>@job.skills</td>
+                <td>@job.exp</td>
+                <td>@job.sal</td>
+                <td>@job.location</td>
+                <td>@job.closedate</td>
+                <td>
+                    @Html.ActionLink("Apply", "jobapply_load", "Job_Apply", new { jid = job.jobid, cid = job.cid }, null)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+

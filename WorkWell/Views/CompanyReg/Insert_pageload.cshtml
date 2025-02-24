@@ -1,0 +1,65 @@
+﻿@model WorkWell.Models.CompanyInsert
+@{
+    ViewBag.Title = "Insert_pageload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Company Registration</h2>
+<div>
+    @using(Html.BeginForm("Insert_click", "CompanyReg", FormMethod.Post))
+    {
+    <div>
+        <label>Company Name:</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.cname)
+        @Html.ValidationMessageFor(m => m.cname)
+    </div>
+    <div>
+        <label>Company Address:</label>
+    </div>
+    <div>
+        @Html.TextAreaFor(m => m.cadd)
+        @Html.ValidationMessageFor(m => m.cadd)
+    </div>
+    <div>
+        <label>Phone:</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.cphone)
+        @Html.ValidationMessageFor(m => m.cphone)
+    </div>
+    <div>
+        <label>Company Email:</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.cemail)
+        @Html.ValidationMessageFor(m => m.cemail)
+    </div>
+    <div>
+        <label>Username</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.username)
+        @Html.ValidationMessageFor(m => m.username)
+    </div>
+    <div>
+        <label>Password</label>
+    </div>
+    <div>
+        @Html.PasswordFor(m => m.pass)
+       
+    </div>
+    <div>
+        <label> Confirm Password</label>
+    </div>
+    <div>
+        @Html.PasswordFor(m => m.cpass)
+        @Html.ValidationMessageFor(m => m.cpass)
+    </div>
+    <div>
+        <input type="submit" value="insert" />
+        @Html.DisplayFor(m=>m.admsg)
+    </div>
+    }
+</div>
+
